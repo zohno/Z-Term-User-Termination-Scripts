@@ -1,4 +1,4 @@
-﻿$user = args[0]
+$user = args[0]
 $pass= args[1]
 $SamAccountName = args[2]
 $pair = "$($user):$($pass)"

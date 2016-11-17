@@ -15,4 +15,4 @@ $Result = Invoke-WebRequest -Uri ("https://zohno.zendesk.com/api/v2/search.json?
 $x = $Result.Content | ConvertFrom-Json
 $id = $x.results.id
 
-Invoke-WebRequest -Uri ("https://zohno.zendesk.com/api/v2/users/" + $id + ".json" | echo) -body '{"user": {"suspended": true}}' -ContentType "application/json" -Headers $headers -Method PUT
+Invoke-WebRequest -Uri ("https://zohno.zendesk.com/api/v2/users/" + $id + ".json" | echo) -body '{"user": {"suspended": false}}' -ContentType "application/json" -Headers $headers -Method PUT
