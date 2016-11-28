@@ -1,6 +1,6 @@
-﻿$user = args[0]
-$pass= args[1]
-$SamAccountName = args[2]
+﻿$user = 'xyz@gmail.com'
+$pass= '***'
+$SamAccountName = args[0]
 $pair = "$($user):$($pass)"
 
 $encodedCreds = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($pair))
@@ -11,7 +11,7 @@ $Headers = @{
     Authorization = $basicAuthValue
 }
 
-$Result = Invoke-WebRequest -Uri 'https://zohno.zendesk.com/api/v2/search.json?query=type:user "Balram"' -Headers $Headers
+$Result = Invoke-WebRequest -Uri 'https://{subdomain}.zendesk.com/api/v2/search.json?query=type:user "Balram"' -Headers $Headers
 
 
 $x = $Result.Content | ConvertFrom-Json
