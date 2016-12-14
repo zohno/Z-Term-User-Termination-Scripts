@@ -1,6 +1,0 @@
-﻿
-Now we no need to fetch the Access Token from the developer tool website. I found the easy way to get the Access Token by passing the Domain User Name and Password as an first 2 arguments. From the credentials of GotoMeeting first it gets the Access Token then use that token next to disable the user.
-
-Now these script takes 3 arguments total. First domain User Name, second password and third email id of the user which you want to make it disable.
-
-We need 2 dlls for it. CitrixGotoUserAPI.dll which is used to disable the user and Newtonsoft.json.dll which is responsible to de-serialize the object of user. I also added the comments in the script itself.
